@@ -1,0 +1,96 @@
+<body>
+<button class="but1" mat-raised-button color="warn" [routerLink]="['/sec-allot']" style="margin-left:5%;">Go
+  Back</button>  <br><br><br>
+<div class="container jumbotron">
+  <h2>Reserve</h2>
+  <p>Please fill in the details</p>
+  <hr>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" class="size">
+      <label for="carId"><b>Car Id :</b> </label><br>
+      <input [maxlength]="7" class="form-control" type="text" placeholder="Enter Car Id" formControlName="carId" />
+
+      <div *ngIf="submitted && f.carId.errors">
+
+        <div class="alert alert-warning" *ngIf="f.carId.errors.required">Car Id is required
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="form-group size">
+      <label for="toc"><b>Type of Car :</b> </label><br>
+      <input class="form-control" readonly type="text" formControlName="toc"  />
+    </div>
+
+    <div class="form-group size">
+      <label for="floor"><b>Floor Number</b> </label><br>
+      <input class="form-control" readonly type="text" formControlName="floor"  />
+    </div>
+
+
+    <div class="form-group size">
+      <label for="slotNo"><b>Parking Slot Number :</b> </label><br>
+      <input readonly class="form-control" type="text" formControlName="sno" />
+    </div>
+
+    <div class="form-group size">
+      <label for="block"><b>Parking Block :</b> </label><br>
+      <input readonly class="form-control" type="text" formControlName="block" />
+    </div>
+
+    <div class="form-group size">
+      <label for="pf"><b>Parking Fare :</b> </label><br>
+      <input readonly class="form-control" type="text" formControlName="pf" />
+    </div>
+
+    <div class="form-group size">
+      <label for="driverName"><b>Driver Name :</b> </label><br>
+      <input class="form-control" type="text" placeholder="Enter Driver Name" formControlName="driverName" />
+      <div *ngIf="submitted && f.driverName.errors">
+        <div class="alert alert-warning" *ngIf="f.driverName.errors.required">Driver Name is required</div>
+      </div>
+    </div>
+    <div class="form-group size">
+      <label for="parkingDate"><b>Parking Date :</b> </label><br>
+      <input class="form-control" type="date" formControlName="parkingDate" placeholder="dd/mm/yyy" />
+      <div *ngIf="submitted && f.parkingDate.errors">
+        <div class="alert alert-warning" *ngIf="f.parkingDate.errors.required">Parking Date is required</div>
+      </div>
+    </div>
+
+    <div class="form-group size">
+      <label for="parkingTime"><b>Parking Time :</b> </label><br>
+      <input class="form-control" type="time" formControlName="parkingTime" />
+      <div *ngIf="submitted && f.parkingTime.errors">
+        <div class="alert alert-warning" *ngIf="f.parkingTime.errors.required">Parking Time is required</div>
+      </div>
+    </div>
+    <div class="form-group size">
+      <label for="fromPlace"><b>From Place :</b> </label><br>
+      <input class="form-control" type="text" placeholder="Enter the From Place" formControlName="fromPlace" />
+      <div *ngIf="submitted && f.fromPlace.errors">
+        <div class="alert alert-warning" *ngIf="f.fromPlace.errors.required">From Place is required</div>
+      </div>
+    </div>
+    <div class="form-group size">
+      <label for="noOfMembers"><b>Number Of Members in Car :</b> </label><br>
+      <input class="form-control" type="number" placeholder="Enter number of members in the car"
+        formControlName="noOfMembers" />
+      <div *ngIf="submitted && f.noOfMembers.errors">
+        <div class="alert alert-warning" *ngIf="f.noOfMembers.errors.required">Number of members is required</div>
+      </div>
+    </div>
+
+
+    <hr>
+
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </form>
+</div>
+</body>

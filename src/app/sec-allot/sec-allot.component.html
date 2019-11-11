@@ -1,0 +1,28 @@
+<body>
+<mat-toolbar color="blue">Parking Plot Details&nbsp; <mat-icon>directions_car</mat-icon></mat-toolbar>
+<button class="but1" mat-raised-button color="warn" [routerLink]="['/dashboard']" style="margin-left:5%;">Go
+    Back</button>  
+<table>
+        <tr>
+            <th>Slot No.</th>
+            <th>Floor No.</th>
+            <th>Block</th>
+            <th>Type of Vehicle</th>
+            <th>Parking Fare</th>
+            <th>Status</th>
+            <th>Booked Parking</th>
+            <th>Allot Parking</th>
+        </tr>
+        <tr *ngFor="let slot of slots">
+            <td>{{slot.sno}}</td>
+            <td>{{slot.floor}}</td>
+            <td>{{slot.block}}</td>
+            <td>{{slot.toc}}</td>
+            <td>{{slot.pf}}</td>
+            <td *ngIf="slot.status">Open</td>
+            <td *ngIf="!slot.status">Booked</td>
+            <td><button disabled *ngIf="!slot.status"  [routerLink] ="['/allot-details',slot.sno]">Alloted</button></td>
+            <td><button *ngIf="slot.status"  [routerLink] ="['/allot-details',slot.sno]">Allot</button></td>            
+        </tr>
+    </table>
+</body>

@@ -1,0 +1,44 @@
+<body>
+<mat-toolbar color="blue">Parked Vehicle Details&nbsp; <mat-icon>directions_car</mat-icon></mat-toolbar>
+<button class="but1" mat-raised-button color="warn" [routerLink]="['/dashboard']" style="margin-left:10%;">Go
+    Back</button>
+<div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Search by CarId or DriverName" [(ngModel)]="searchText">
+           <button type="submit" class="searchButton">
+              <mat-icon>search</mat-icon>
+          </button>
+        </div>
+    </div> 
+    
+<table>
+        <tr>
+            <th>Slot No.</th>
+            <th>Floor No.</th>
+            <th>Block</th>
+            <th>Type of Vehicle</th>
+            <th>Parking Fare</th>
+            <th>Car Id</th>
+            <th>Driver Name</th>
+            <th>From Place</th>
+            <th>No. of Members</th>
+            <th>Parking Date</th>
+            <th>Parking Time</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let slot of slots | filter:searchText">
+            <td *ngIf="slot.carId">{{slot.sno}}</td>
+            <td *ngIf="slot.carId">{{slot.floor}}</td>
+            <td *ngIf="slot.carId">{{slot.block}}</td>
+            <td *ngIf="slot.carId">{{slot.toc}}</td>
+            <td *ngIf="slot.carId">{{slot.pf}}</td>
+            <td>{{slot.carId}}</td>
+            <td>{{slot.driverName}}</td>
+            <td>{{slot.fromPlace}}</td>
+            <td>{{slot.noOfMembers}}</td>
+            <td>{{slot.parkingDate}}</td>
+            <td>{{slot.parkingTime}}</td>
+            <td><button *ngIf="slot.carId" (click)="delete(slot.sno)">Delete</button></td>
+        </tr>
+    </table>
+</body>    

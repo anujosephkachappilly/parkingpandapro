@@ -1,0 +1,15 @@
+
+#footer
+{
+width: 100%;
+position: fixed;
+text-align: center;
+padding-top: 0.75em;
+text-transform: lowercase;
+bottom:0;
+left:0;
+right:0;
+background-color:	#870116;
+color:whitesmoke;
+}
+

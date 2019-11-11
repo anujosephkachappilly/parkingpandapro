@@ -1,0 +1,32 @@
+<div class="admin">
+<h1 align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    Admin Panel <mat-icon>build</mat-icon></h1>
+    <button class="but" mat-raised-button color="warn" [routerLink]="['/admin-login']" style="margin-left:90%;">Sign Out</button>
+    <button class="but1" mat-raised-button color="warn" [routerLink]="['/admin-panel']" style="margin-left:10%;">Go Back</button>
+    <br><br><br>
+    <mat-toolbar color="blue">Parking Plot Details&nbsp; <mat-icon>directions_car</mat-icon></mat-toolbar>
+    <table>
+        <tr>
+            <th>Slot No.</th>
+            <th>Floor No.</th>
+            <th>Block</th>
+            <th>Type of Vehicle</th>
+            <th>Parking Fare</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let slot of slots">
+            <td>{{slot.sno}}</td>
+            <td>{{slot.floor}}</td>
+            <td>{{slot.block}}</td>
+            <td>{{slot.toc}}</td>
+            <td>{{slot.pf}}</td>
+            <td>
+            <button mat-stroked-button color="warn" [routerLink]="['/edit',slot.sno]"><mat-icon>edit</mat-icon>Edit</button> 
+            </td>             
+            <td>   
+            <button mat-stroked-button color="warn" (click)="delete(slot.sno)"><mat-icon>delete</mat-icon>Delete</button>
+            </td>
+        </tr>
+    </table>
+   </div>

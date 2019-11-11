@@ -1,0 +1,45 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+#form
+{
+    width: 600px;
+    
+}
+.admin
+{
+    justify-content: center;
+	height: 130vh;
+	background: #fcf3ec;
+}
+button
+{
+    background-color:darkred;
+}
+.but
+{
+    width:90px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+}
+.but1
+{
+    display: inline;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+.submit
+{
+    position: absolute;
+}
+.go
+{
+    display: inline;
+    margin-left: 110px;
+}
+.size{
+    width:600px;
+}
+.size2{
+    width:750px;
+}

@@ -1,0 +1,42 @@
+body {
+	
+	
+	justify-content: center;
+	height: 80%;
+	background: #fcf3ec;
+	
+}
+.but1
+{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top:2%;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 160px;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    text-align: center;
+	padding: 10px;
+	padding-left: 15px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color:darkred;
+	color: white;
+    text-align: center;
+  }
+  button{
+    background-color:darkred;
+    color:white;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+  }

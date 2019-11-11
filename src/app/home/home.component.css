@@ -1,0 +1,31 @@
+
+video{
+    width: 100%;
+    position: absolute;
+}
+h1{
+    font-size: 60pt;
+    font-weight: bolder;
+}
+.text{
+    float: left;
+    width: 80%;
+    margin: 1px 10% 0;
+    padding: 150px 0 150px;
+    border-radius: 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    font-family: Bahnschrift SemiBold;
+}
+
+.text-white
+{
+    color: aliceblue;
+}
+.text-red
+{
+    color: #8A0600;
+    
+}
+
